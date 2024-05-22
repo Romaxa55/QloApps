@@ -2,42 +2,32 @@ version: '3.8'
 
 services:
   php:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: php-fpm-nginx
-    volumes:
-      - .:/home/qloapps/www
-      - /var/run/php/:/var/run/php/
+    ports: []
+
+  traefik:
+    image: traefik:v3.0.1
+    container_name: traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
+      - "--certificatesresolvers.mytlschallenge.acme.email=${ACME_EMAIL}"
+      - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
     ports:
-      - "8080:80"
-    depends_on:
-      - mysql
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - letsencrypt:/letsencrypt
     networks:
       - qloapps-network
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.php.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.services.php.loadbalancer.server.port=80"
-      - "traefik.http.routers.php.entrypoints=web"
-
-  mysql:
-    image: mysql:5.7
-    container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-qloapps}
-      MYSQL_USER: ${MYSQL_USER:-qloapps}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-qloappspassword}
-    volumes:
-      - mysql_data:/var/lib/mysql
-    networks:
-      - qloapps-network
-
-networks:
-  qloapps-network:
-    driver: bridge
+      - "traefik.http.routers.php.tls.certresolver=mytlschallenge"
+      - "traefik.http.routers.php.tls=true"
 
 volumes:
-  mysql_data:
+  letsencrypt:
     driver: local

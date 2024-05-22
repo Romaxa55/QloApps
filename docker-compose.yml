@@ -39,4 +39,6 @@ networks:
 
 volumes:
   mysql_data:
+    driver: local
   qloapps_data:
+    driver: local
