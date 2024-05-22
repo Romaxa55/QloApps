@@ -20,7 +20,7 @@ WORKDIR /home/${user}/www
 # Update server and install necessary packages
 RUN apk update \
     && apk add --no-cache nginx \
-    && apk add --no-cache php$php_version php$php_version-bcmath php$php_version-cli php$php_version-json php$php_version-curl php$php_version-fpm php$php_version-gd php$php_version-ldap php$php_version-mbstring php$php_version-pdo_mysql php$php_version-soap php$php_version-sqlite3 php$php_version-xml php$php_version-zip php$php_version-intl php$php_version-pecl-imagick curl git nano vim wget php$php_version-phar php$php_version-simplexml
+    && apk add --no-cache php$php_version php$php_version-bcmath php$php_version-cli php$php_version-json php$php_version-curl php$php_version-fpm php$php_version-gd php$php_version-ldap php$php_version-mbstring php$php_version-pdo_mysql php$php_version-soap php$php_version-sqlite3 php$php_version-xml php$php_version-zip php$php_version-intl php$php_version-pecl-imagick curl git nano vim wget php$php_version-phar php$php_version-simplexml supervisor
 
 # Create a symbolic link for php83
 RUN ln -s /usr/bin/php83 /usr/bin/php
@@ -36,7 +36,7 @@ RUN find . -type f -exec chmod 644 {} \; \
     && find . -type d -exec chmod 755 {} \; \
     && chown -R ${user}: .
 
-# Configure PHP for logging errors to stdout
+# Configure PHP for logging errors to stdout and listen on Unix socket
 RUN sed -i \
     -e 's/memory_limit = .*/memory_limit = '${memory_limit}'/' \
     -e 's/file_uploads = .*/file_uploads = '${file_uploads}'/' \
@@ -45,8 +45,13 @@ RUN sed -i \
     -e 's/upload_max_filesize = .*/upload_max_filesize = '${upload_max_filesize}'/' \
     -e 's/post_max_size = .*/post_max_size = '${post_max_size}'/' \
     -e 's/max_input_vars = .*/max_input_vars = '${max_input_vars}'/' \
-    -e 's|;*error_log =.*|error_log = /proc/self/fd/2|' /etc/php$php_version/php.ini
-
+    -e 's|;*error_log =.*|error_log = /proc/self/fd/2|' /etc/php$php_version/php.ini \
+    -e 's|;*access.log =.*|access.log = /proc/self/fd/2|' /etc/php$php_version/php-fpm.conf \
+    -e 's|;*error_log =.*|error_log = /proc/self/fd/2|' /etc/php$php_version/php-fpm.conf \
+    -e 's|listen = 127.0.0.1:9000|listen = /var/run/php/php-fpm.sock|' /etc/php$php_version/php-fpm.d/www.conf \
+    -e 's|;listen.owner = nobody|listen.owner = '${user}'|' /etc/php$php_version/php-fpm.d/www.conf \
+    -e 's|;listen.group = nobody|listen.group = '${user}'|' /etc/php$php_version/php-fpm.d/www.conf \
+    -e 's|;listen.mode = 0660|listen.mode = 0660|' /etc/php$php_version/php-fpm.d/www.conf
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -60,9 +65,18 @@ COPY docker/site.conf /etc/nginx/conf.d/default.conf
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+# Create necessary directories for Nginx and PHP-FPM
+RUN mkdir -p /var/run/php/ \
+    && mkdir -p /var/lib/nginx/logs \
+    && mkdir -p /var/lib/nginx/tmp/client_body \
+    && chown -R ${user}:${user} /var/run/php/ \
+    && chown -R ${user}:${user} /var/lib/nginx
+
+# Supervisor configuration
+COPY docker/supervisord.conf /etc/supervisor/supervisord.conf
+
 # Expose ports
 EXPOSE 80
 
-# Start Nginx and PHP-FPM
+# Start Supervisor
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ["nginx", "-g", "daemon off;"]

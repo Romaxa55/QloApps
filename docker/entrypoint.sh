@@ -1,12 +1,18 @@
 #!/bin/sh
+set -e
 
-# Set timezone
-if [ -n "$timezone" ]; then
-    echo "date.timezone = $timezone" >> /etc/php$php_version/php.ini
-fi
+# Set the timezone
+ln -snf /usr/share/zoneinfo/$timezone /etc/localtime
+echo $timezone > /etc/timezone
 
-# Start PHP-FPM
-php-fpm$php_version
+# Create necessary directories
+mkdir -p /var/run/php/
+chown -R qloapps:qloapps /var/run/php/
 
-# Start Nginx
-exec "$@"
+# Create necessary directories for Nginx
+mkdir -p /var/lib/nginx/logs
+mkdir -p /var/lib/nginx/tmp/client_body
+chown -R qloapps:qloapps /var/lib/nginx
+
+# Run Supervisor
+exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
