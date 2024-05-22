@@ -7,7 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: php-fpm-nginx
     volumes:
-      - qloapps_data:/home/qloapps/www
+      - .:/home/qloapps/www
+      - /var/run/php/:/var/run/php/
     ports:
       - "8080:80"
     depends_on:
@@ -39,4 +40,4 @@ networks:
 
 volumes:
   mysql_data:
-  qloapps_data:
+    driver: local
