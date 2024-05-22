@@ -1,0 +1,26 @@
+# Ignore unnecessary files and directories
+node_modules
+npm-debug.log
+dist
+build
+.env
+.env.*
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+.project
+.settings
+*.sublime-project
+*.sublime-workspace
+.git
+.gitignore
+docker-compose.yml
+.dockerignore
+Dockerfile
