@@ -77,7 +77,7 @@ class InstallControllerHttpSystem extends InstallControllerHttp
         }
 
         if (!is_callable('getenv') || !($user = @getenv('APACHE_RUN_USER'))) {
-            $user = 'Apache';
+            $user = 'qloapps';
         }
 
         // Generate display array

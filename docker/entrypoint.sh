@@ -1,11 +1,7 @@
 #!/bin/sh
 set -e
 
-# Set the timezone
-ln -snf /usr/share/zoneinfo/$timezone /etc/localtime
-echo $timezone > /etc/timezone
-
-# Create necessary directories
+# Create necessary directories for PHP
 mkdir -p /var/run/php/
 chown -R qloapps:qloapps /var/run/php/
 
@@ -13,6 +9,13 @@ chown -R qloapps:qloapps /var/run/php/
 mkdir -p /var/lib/nginx/logs
 mkdir -p /var/lib/nginx/tmp/client_body
 chown -R qloapps:qloapps /var/lib/nginx
+
+# Create necessary directories for the application and set permissions
+for dir in config cache log img mails modules themes/hotel-reservation-theme/lang themes/hotel-reservation-theme/pdf/lang themes/hotel-reservation-theme/cache translations upload download; do
+    mkdir -p /home/qloapps/$dir
+    chown -R qloapps:qloapps /home/qloapps/$dir
+    chmod -R 777 /home/qloapps/$dir
+done
 
 # Run Supervisor
 exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf

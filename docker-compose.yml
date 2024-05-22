@@ -8,6 +8,8 @@ services:
     container_name: php-fpm-nginx
     volumes:
       - qloapps_data:/home/qloapps/www
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     ports:
       - "8080:80"
     depends_on:
