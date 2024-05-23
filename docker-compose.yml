@@ -19,12 +19,12 @@ services:
       - "traefik.http.routers.php.rule=Host(`${DOMAIN}`)"
       - "traefik.http.services.php.loadbalancer.server.port=80"
       - "traefik.http.routers.php.entrypoints=web"
-#      - "traefik.http.routers.php.middlewares=corsheader@docker"
-#      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
-#      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowheaders=*"
-#      - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://${DOMAIN}"
-#      - "traefik.http.middlewares.corsheader.headers.accesscontrolmaxage=100"
-#      - "traefik.http.middlewares.corsheader.headers.addvaryheader=true"
+      - "traefik.http.routers.php.middlewares=corsheader@docker"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowheaders=*"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://${DOMAIN}"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolmaxage=100"
+      - "traefik.http.middlewares.corsheader.headers.addvaryheader=true"
 
   mariadb:
     image: mariadb:10.5
