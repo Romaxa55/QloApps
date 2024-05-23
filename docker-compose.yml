@@ -21,6 +21,12 @@ services:
       - "traefik.http.routers.php.entrypoints=web"
       - "traefik.http.routers.php.tls.certresolver=mytlschallenge"
       - "traefik.http.routers.php.tls=true"
+      - "traefik.http.routers.php.middlewares=corsheader@docker"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowheaders=*"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://foo.bar.org,https://example.org"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolmaxage=100"
+      - "traefik.http.middlewares.corsheader.headers.addvaryheader=true"
 
   mariadb:
     image: mariadb:10.5
