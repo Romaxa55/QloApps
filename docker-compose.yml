@@ -16,6 +16,9 @@ services:
       - qloapps-network
     labels:
       - "traefik.enable=true"
+      - "traefik.http.routers.php-http.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.php-http.entrypoints=http"
+      - "traefik.http.routers.php-http.middlewares=redirect-to-https"
       - "traefik.http.routers.php.rule=Host(`${DOMAIN}`)"
       - "traefik.http.routers.php.entrypoints=websecure"
       - "traefik.http.routers.php.tls.certresolver=mytlschallenge"
