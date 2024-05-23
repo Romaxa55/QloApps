@@ -27,6 +27,8 @@ services:
       - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://${DOMAIN}"
       - "traefik.http.middlewares.corsheader.headers.accesscontrolmaxage=100"
       - "traefik.http.middlewares.corsheader.headers.addvaryheader=true"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
 
   mariadb:
     image: mariadb:10.5
