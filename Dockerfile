@@ -22,7 +22,7 @@ WORKDIR /home/${user}
 # Update server and install necessary packages
 RUN apk update \
     && apk add --no-cache nginx \
-    && apk add --no-cache php$php_version php$php_version-bcmath php$php_version-cli php$php_version-json php$php_version-curl php$php_version-fpm php$php_version-gd php$php_version-ldap php$php_version-mbstring php$php_version-pdo_mysql php$php_version-soap php$php_version-sqlite3 php$php_version-xml php$php_version-zip php$php_version-intl php$php_version-pecl-imagick php$php_version-session php$php_version-dom curl git nano vim wget php$php_version-phar php$php_version-simplexml supervisor grep
+    && apk add --no-cache php$php_version php$php_version-bcmath php$php_version-cli php$php_version-json php$php_version-curl php$php_version-fpm php$php_version-gd php$php_version-ldap php$php_version-mbstring php$php_version-pdo_mysql php$php_version-soap php$php_version-sqlite3 php$php_version-xml php$php_version-zip php$php_version-intl php$php_version-pecl-imagick php$php_version-session php$php_version-dom curl git nano vim wget php$php_version-phar php$php_version-simplexml php$php_version-ctype supervisor grep
 
 # Setup non-root user with specified home directory
 RUN adduser -D -s /bin/sh -h /home/${user} ${user}
