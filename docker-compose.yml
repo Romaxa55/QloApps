@@ -19,8 +19,6 @@ services:
       - "traefik.http.routers.php.rule=Host(`${DOMAIN}`)"
       - "traefik.http.services.php.loadbalancer.server.port=80"
       - "traefik.http.routers.php.entrypoints=web"
-      - "traefik.http.routers.php.tls.certresolver=mytlschallenge"
-      - "traefik.http.routers.php.tls=true"
 #      - "traefik.http.routers.php.middlewares=corsheader@docker"
 #      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
 #      - "traefik.http.middlewares.corsheader.headers.accesscontrolallowheaders=*"
