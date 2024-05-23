@@ -1,7 +1,7 @@
 [mysqld]
 log_error = /dev/stderr
-general_log_file = /dev/stdout
 general_log = 1
-slow_query_log_file = /dev/stdout
+general_log_file = /dev/stdout
 slow_query_log = 1
+slow_query_log_file = /dev/stdout
 long_query_time = 1
