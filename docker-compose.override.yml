@@ -36,9 +36,10 @@ services:
       - "traefik.http.routers.http-catchall.entrypoints=web"
       - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
       - "traefik.http.routers.http-catchall.middlewares=redirect-to-https@docker"
+      - "traefik.http.routers.http-catchall.priority=1"
       - "traefik.http.routers.acme-challenge.entrypoints=web"
       - "traefik.http.routers.acme-challenge.rule=PathPrefix(`/.well-known/acme-challenge/`)"
-      - "traefik.http.routers.acme-challenge.priority=1"
+      - "traefik.http.routers.acme-challenge.priority=2"
 
   adminer:
     image: adminer
