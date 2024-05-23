@@ -31,6 +31,8 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
       - ./docker/my_custom.cnf:/etc/mysql/conf.d/my_custom.cnf
+      - ./my_custom.cnf:/etc/mysql/conf.d/my_custom.cnf
+      - ./logs:/var/log/mysql
     networks:
       - qloapps-network
 

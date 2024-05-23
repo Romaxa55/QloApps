@@ -17,7 +17,7 @@ bower_components
 composer.lock
 
 # Cache, temp and personal files
-
+logs/*.log
 /cache/**
 !/cache/cacert.pem
 !/cache/index.php
