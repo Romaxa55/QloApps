@@ -41,11 +41,9 @@ services:
       - qloapps-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.adminer.tls.certresolver=mytlschallenge"
-      - "traefik.http.routers.adminer.tls=true"
       - "traefik.http.routers.adminer.rule=Host(`shell.${DOMAIN}`)"
       - "traefik.http.services.adminer.loadbalancer.server.port=8080"
-      - "traefik.http.routers.adminer.entrypoints=websecure"
+      - "traefik.http.routers.adminer.entrypoints=web"
 
 volumes:
   letsencrypt:
