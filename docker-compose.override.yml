@@ -6,6 +6,10 @@ services:
       - /etc/timezone:/etc/timezone:ro
     ports: []
 
+  mariadb:
+    volumes:
+      - /opt/database:/var/lib/mysql
+
   traefik:
     image: traefik:v3.0.1
     container_name: traefik
