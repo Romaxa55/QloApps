@@ -1,8 +1,7 @@
 services:
   php:
     volumes:
-      - /opt/config:/home/qloapps/config
-      - qloapps_data:/home/qloapps/
+      - qloapps_data:/home/qloapps
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     ports: []
