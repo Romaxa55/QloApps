@@ -41,28 +41,31 @@ RUN find . -type f -exec chmod 644 {} \; \
 
 # Configure PHP for logging errors to stdout and listen on Unix socket
 RUN sed -i \
-    -e 's/memory_limit = .*/memory_limit = '${memory_limit}'/' \
-    -e 's/file_uploads = .*/file_uploads = '${file_uploads}'/' \
-    -e 's/allow_url_fopen = .*/allow_url_fopen = '${allow_url_fopen}'/' \
-    -e 's/max_execution_time = .*/max_execution_time = '${max_execution_time}'/' \
-    -e 's/upload_max_filesize = .*/upload_max_filesize = '${upload_max_filesize}'/' \
-    -e 's/post_max_size = .*/post_max_size = '${post_max_size}'/' \
-    -e 's/max_input_vars = .*/max_input_vars = '${max_input_vars}'/' \
-    -e 's|;*error_log =.*|error_log = /proc/self/fd/2|' /etc/php$php_version/php.ini \
-    -e 's|;*access.log =.*|access.log = /proc/self/fd/2|' /etc/php$php_version/php-fpm.conf \
-    -e 's|display_errors = Off|display_errors = On|' /etc/php$php_version/php.ini \
-    -e 's|display_startup_errors = Off|display_startup_errors = On|' /etc/php$php_version/php.ini \
-    -e 's|log_errors = Off|log_errors = On|' /etc/php$php_version/php.ini \
-    -e 's|error_reporting = .*|error_reporting = E_ALL|' /etc/php$php_version/php.ini \
-    -e 's|error_log = /proc/self/fd/2|error_log = /var/log/php_errors.log|' /etc/php$php_version/php.ini \
-    -e 's|sys_temp_dir = "/tmp"|sys_temp_dir = "/tmp/qloapps"|' /etc/php$php_version/php.ini \
-    -e 's|upload_tmp_dir = "/tmp"|upload_tmp_dir = "/tmp/qloapps"|' /etc/php$php_version/php.ini \
-    -e 's|session.save_path = "/tmp"|session.save_path = "/tmp/qloapps"|' /etc/php$php_version/php.ini \
-    -e 's|listen = 127.0.0.1:9000|listen = /var/run/php/php-fpm.sock|' /etc/php$php_version/php-fpm.d/www.conf \
-    -e 's|;listen.owner = nobody|listen.owner = '${user}'|' /etc/php$php_version/php-fpm.d/www.conf \
-    -e 's|;listen.group = nobody|listen.group = '${user}'|' /etc/php$php_version/php-fpm.d/www.conf \
-    -e 's|;listen.mode = 0660|listen.mode = 0660|' /etc/php$php_version/php-fpm.d/www.conf \
-    -e 's|;catch_workers_output = no|catch_workers_output = yes|' /etc/php$php_version/php-fpm.d/www.conf
+    -e 's/^\s*;\?\s*memory_limit\s*=.*/memory_limit = '${memory_limit}'/' \
+    -e 's/^\s*;\?\s*file_uploads\s*=.*/file_uploads = '${file_uploads}'/' \
+    -e 's/^\s*;\?\s*allow_url_fopen\s*=.*/allow_url_fopen = '${allow_url_fopen}'/' \
+    -e 's/^\s*;\?\s*max_execution_time\s*=.*/max_execution_time = '${max_execution_time}'/' \
+    -e 's/^\s*;\?\s*upload_max_filesize\s*=.*/upload_max_filesize = '${upload_max_filesize}'/' \
+    -e 's/^\s*;\?\s*post_max_size\s*=.*/post_max_size = '${post_max_size}'/' \
+    -e 's/^\s*;\?\s*max_input_vars\s*=.*/max_input_vars = '${max_input_vars}'/' \
+    -e 's|^\s*;\?\s*error_log\s*=.*|error_log = /proc/self/fd/2|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*access.log\s*=.*|access.log = /proc/self/fd/2|' /etc/php$php_version/php-fpm.conf \
+    -e 's|^\s*;\?\s*display_errors\s*=.*|display_errors = On|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*display_startup_errors\s*=.*|display_startup_errors = On|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*log_errors\s*=.*|log_errors = On|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*error_reporting\s*=.*|error_reporting = E_ALL|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*error_log\s*=.*|error_log = /var/log/php_errors.log|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*sys_temp_dir\s*=.*|sys_temp_dir = "/tmp/qloapps"|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*upload_tmp_dir\s*=.*|upload_tmp_dir = "/tmp/qloapps"|' /etc/php$php_version/php.ini \
+    -e 's|^\s*;\?\s*session.save_path\s*=.*|session.save_path = "/tmp/qloapps"|' /etc/php$php_version/php.ini
+
+RUN sed -i \
+    -e 's|^\s*;\?\s*listen\s*=.*|listen = /var/run/php/php-fpm.sock|' \
+    -e 's|^\s*;\?\s*listen.owner\s*=.*|listen.owner = '${user}'|' \
+    -e 's|^\s*;\?\s*listen.group\s*=.*|listen.group = '${user}'|' \
+    -e 's|^\s*;\?\s*listen.mode\s*=.*|listen.mode = 0660|' \
+    -e 's|^\s*;\?\s*catch_workers_output\s*=.*|catch_workers_output = yes|' \
+    /etc/php$php_version/php-fpm.d/www.conf
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
