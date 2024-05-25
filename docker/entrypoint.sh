@@ -26,6 +26,8 @@ chmod -R 777 /tmp/qloapps
 if [ "$ENVIRONMENT" = "development" ]; then
     echo "Running composer install..."
     composer install --prefer-dist --optimize-autoloader --no-interaction
+    rm -r install
+    rm -r admin
 fi
 
 # Run Supervisor

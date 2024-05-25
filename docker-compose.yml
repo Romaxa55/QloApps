@@ -5,7 +5,6 @@ services:
       dockerfile: Dockerfile
     container_name: php-fpm-nginx
     volumes:
-      - qloapps_data:/home/qloapps/
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     ports:

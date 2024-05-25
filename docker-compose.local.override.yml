@@ -6,9 +6,8 @@ services:
       args:
         ENVIRONMENT: development
     volumes:
-      - qloapps_data:/home/qloapps/
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
+      - ./config_dev:/home/qloapps/config
+      - ./admin:/home/qloapps/adm
       - ./themes:/home/qloapps/themes
     ports:
       - "9003:9003"
