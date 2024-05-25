@@ -329,7 +329,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>searchform_301daa1cc881bbe0d0dbbf4dbe44
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_c4e13ba7a66c1c004d8bbe9fef3acc6a'] = 'Комната - 1';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_96cf4454dc3ef5d9fdb449d7abd5fa8f'] = 'Добавить комнату';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_9ba604d9592d950d600241e21916db07'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e471afb380b4cd24a7fd612d563007b2'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e471afb380b4cd24a7fd612d563007b2'] = 'Результаты поиска для';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e807d3ccf8d24c8c1a3d86db5da78da8'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e10758a0bbe2e5a1bd948a8fe1a4a3dc'] = 'Ночи';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_0edc9b073397681dc9f2c479686ea0d9'] = 'Ночь';
@@ -338,7 +338,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>landingpagexsbtn_b3ed1d9151cc469d5521e5
 $_MODULE['<{wkroomsearchblock}prestashop>landingpagesearch_9ba604d9592d950d600241e21916db07'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>categorypagesearch_9ba604d9592d950d600241e21916db07'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_02fa171653f28a578b9067b1fc20b5d0'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_38571a5bad5b5b95698dd2df465ec8fd'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_38571a5bad5b5b95698dd2df465ec8fd'] = 'Пожалуйста, выберите действительную регистрацию заезда';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_da097cb599541edbea879d14f31e715c'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_6166c0832319050b9f2922a819ed1b49'] = 'Пожалуйста, выберите действительный диапазон дат';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_a457237043b2833f9f968c47ff282ac0'] = 'Неверное размещение';
