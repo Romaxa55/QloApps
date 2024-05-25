@@ -1,4 +1,7 @@
 <?php
+
+global $_LANG;
+$_LANG = array();
 $_LANG['404_195291955e85f19c7621facbdb7d86fa'] = 'Trang không tìm thấy!!!';
 $_LANG['404_44b1d05764b093cb00c25b8228cb87d3'] = 'Trang này không có sẵn';
 $_LANG['404_6554aae881e40036cac1f5710a4c52c1'] = 'Rất tiếc, địa chỉ Web bạn đã nhập không còn tồn tại nữa.';
