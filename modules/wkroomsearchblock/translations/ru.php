@@ -332,7 +332,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>searchform_9ba604d9592d950d600241e21916
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e471afb380b4cd24a7fd612d563007b2'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e807d3ccf8d24c8c1a3d86db5da78da8'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e10758a0bbe2e5a1bd948a8fe1a4a3dc'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_0edc9b073397681dc9f2c479686ea0d9'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_0edc9b073397681dc9f2c479686ea0d9'] = 'Ночь';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_c19c9ab290c7903e496c636cba2952c3'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>landingpagexsbtn_b3ed1d9151cc469d5521e529ed7596bf'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>landingpagesearch_9ba604d9592d950d600241e21916db07'] = '';
@@ -342,6 +342,6 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_38571a5bad5b5b95698d
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_da097cb599541edbea879d14f31e715c'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_6166c0832319050b9f2922a819ed1b49'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_a457237043b2833f9f968c47ff282ac0'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_b2909eef7c968c6e1fa20bf4735da4b5'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_b2909eef7c968c6e1fa20bf4735da4b5'] = 'Недействительные взрослые';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81f8d725d84b2e'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_fcdc86aac9171bfe3abc68f10d819cb9'] = '';
