@@ -157,7 +157,7 @@ img/**
 
 # modules/*
 /modules/*/config.xml
-/modules/*/translations/*
+#/modules/*/translations/*
 
 /override/*
 !/override/.htaccess
