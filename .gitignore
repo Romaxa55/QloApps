@@ -259,3 +259,6 @@ admin/themes/default/css/screen.css
 **sitemap.xml
 robots.txt
 /modules/wkabouthotelblock/views/img/
+/modules/wkfooterpaymentblock/views/img/
+/modules/wkhotelfeaturesblock/views/img/
+/modules/wktestimonialblock/views/img/
