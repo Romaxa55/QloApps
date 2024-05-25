@@ -17,6 +17,11 @@ for dir in config cache log img mails modules themes/hotel-reservation-theme/lan
     chmod -R 777 /home/qloapps/$dir
 done
 
+# Create necessary directories for sessions
+mkdir -p /tmp/qloapps
+chown -R qloapps:qloapps /tmp/qloapps
+chmod -R 777 /tmp/qloapps
+
 # Install Composer dependencies in development environment
 if [ "$ENVIRONMENT" = "development" ]; then
     echo "Running composer install..."
