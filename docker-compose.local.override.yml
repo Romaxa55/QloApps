@@ -1,0 +1,19 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        ENVIRONMENT: development
+    volumes:
+      - qloapps_data:/home/qloapps/
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - "9003:9003"
+    environment:
+      XDEBUG_MODE: debug
+      XDEBUG_START_WITH_REQUEST: yes
+      ENVIRONMENT: development
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

@@ -17,5 +17,11 @@ for dir in config cache log img mails modules themes/hotel-reservation-theme/lan
     chmod -R 777 /home/qloapps/$dir
 done
 
+# Install Composer dependencies in development environment
+if [ "$ENVIRONMENT" = "development" ]; then
+    echo "Running composer install..."
+    composer install --prefer-dist --optimize-autoloader --no-interaction
+fi
+
 # Run Supervisor
 exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
