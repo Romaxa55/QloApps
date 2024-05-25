@@ -6,7 +6,7 @@ services:
       - ./themes/hotel-reservation-theme/lang:/home/qloapps/themes/hotel-reservation-theme/lang:rw
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-      - /opt/backups::/home/qloapps/adm/backups:rw
+      - /opt/backups:/home/qloapps/adm/backups:rw
     tmpfs:
       - /tmp/qloapps
     ports: []
