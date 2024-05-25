@@ -1,4 +1,8 @@
 <?php
+
+global $_MODULE;
+$_MODULE = array();
+
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_a2e9cd952cda8ba167e62b25a496c6c1'] = 'Khối thông tin người dùng';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_970a31aa19d205f92ccfd1913ca04dc0'] = 'Thêm một khối hiển thị thông tin về khách hàng.';
 $_MODULE['<{blockuserinfo}prestashop>blockuserinfo_0c3bf3014aafb90201805e45b5e62881'] = 'Xem giỏ hàng của tôi';
