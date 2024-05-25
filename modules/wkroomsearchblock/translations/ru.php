@@ -6,7 +6,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_c57fbb68344c9aa8f3cec
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_77ee10023dc0558e89752b846c9e4843'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_e532f3b0f11e7f91c6b9048a59031850'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_0dabf5a1efaaca613149f44bb7f07813'] = 'Дата заезда не может быть раньше текущей даты.';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_4d132c9783393c14bba497e11c8ab9c0'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_4d132c9783393c14bba497e11c8ab9c0'] = 'Дата выезда должна быть позже даты заезда.';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_7a4b3f0e76bc75caf203b4c640a17e0f'] = 'Выбрать отель';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_b1291813d6d274a57e07893f6ebc6641'] = 'Выберите возраст';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_301daa1cc881bbe0d0dbbf4dbe444e90'] = 'До 1 года';
@@ -343,5 +343,5 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_da097cb599541edbea87
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_6166c0832319050b9f2922a819ed1b49'] = 'Пожалуйста, выберите действительный диапазон дат';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_a457237043b2833f9f968c47ff282ac0'] = 'Неверное размещение';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_b2909eef7c968c6e1fa20bf4735da4b5'] = 'Недействительные взрослые';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81f8d725d84b2e'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81f8d725d84b2e'] = 'Недействительные дети';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_fcdc86aac9171bfe3abc68f10d819cb9'] = '';
