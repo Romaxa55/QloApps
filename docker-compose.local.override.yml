@@ -9,9 +9,8 @@ services:
       - ./config_dev:/home/qloapps/config
       - ./admin:/home/qloapps/adm
       - ./img:/home/qloapps/img
-      - ./modules_dev:/home/qloapps/modules
+      - ./modules_dev:/home/qloapps/modules:rw
       - ./img_dev:/home/qloapps/img
-      - ./themes:/home/themes
     ports:
       - "9003:9003"
     environment:
