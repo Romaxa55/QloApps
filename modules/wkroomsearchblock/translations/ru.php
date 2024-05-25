@@ -334,8 +334,8 @@ $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e807d3ccf8d24c8c1a3d
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e10758a0bbe2e5a1bd948a8fe1a4a3dc'] = 'Ночи';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_0edc9b073397681dc9f2c479686ea0d9'] = 'Ночь';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_c19c9ab290c7903e496c636cba2952c3'] = 'Изменить поиск';
-$_MODULE['<{wkroomsearchblock}prestashop>landingpagexsbtn_b3ed1d9151cc469d5521e529ed7596bf'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>landingpagesearch_9ba604d9592d950d600241e21916db07'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>landingpagexsbtn_b3ed1d9151cc469d5521e529ed7596bf'] = 'Сделать заказ';
+$_MODULE['<{wkroomsearchblock}prestashop>landingpagesearch_9ba604d9592d950d600241e21916db07'] = 'Поиск номеров';
 $_MODULE['<{wkroomsearchblock}prestashop>categorypagesearch_9ba604d9592d950d600241e21916db07'] = 'Поиск номеров';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_02fa171653f28a578b9067b1fc20b5d0'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_38571a5bad5b5b95698dd2df465ec8fd'] = 'Пожалуйста, выберите действительную регистрацию заезда';
