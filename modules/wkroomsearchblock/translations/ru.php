@@ -5,9 +5,9 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_81b7ba315790a4e172088
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_c57fbb68344c9aa8f3cece05ad876ae6'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_77ee10023dc0558e89752b846c9e4843'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_e532f3b0f11e7f91c6b9048a59031850'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_0dabf5a1efaaca613149f44bb7f07813'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_0dabf5a1efaaca613149f44bb7f07813'] = 'Дата заезда не может быть раньше текущей даты.';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_4d132c9783393c14bba497e11c8ab9c0'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_7a4b3f0e76bc75caf203b4c640a17e0f'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_7a4b3f0e76bc75caf203b4c640a17e0f'] = 'Выбрать отель';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_b1291813d6d274a57e07893f6ebc6641'] = 'Выберите возраст';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_301daa1cc881bbe0d0dbbf4dbe444e90'] = 'До 1 года';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_cc3abcf4426bff80257d22999d0eda8f'] = 'Комната';
