@@ -6,8 +6,11 @@ services:
       args:
         ENVIRONMENT: development
     volumes:
-#      - ./config_dev:/home/qloapps/config
+      - ./config_dev:/home/qloapps/config
       - ./admin:/home/qloapps/adm
+      - ./img:/home/qloapps/img
+      - ./modules_dev:/home/qloapps/modules
+      - ./img_dev:/home/qloapps/img
     ports:
       - "9003:9003"
     environment:

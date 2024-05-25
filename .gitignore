@@ -2,6 +2,7 @@
 # Editors, tools and OS's
 config_dev
 modules_dev
+img_dev
 .env
 .buildpath
 /.htaccess
