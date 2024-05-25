@@ -3,6 +3,7 @@ services:
     volumes:
       - qloapps_data:/home/qloapps
       - ./modules:/home/qloapps/modules:rw
+      - ./themes/hotel-reservation-theme/lang:/home/qloapps/themes/hotel-reservation-theme/lang:rw
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     ports: []
