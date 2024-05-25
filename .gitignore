@@ -237,7 +237,7 @@ admin/themes/default/css/screen.css
 !/themes/hotel-reservation-theme/cache/
 !/themes/hotel-reservation-theme/cache/index.php
 
-/themes/hotel-reservation-theme/lang/*
+#/themes/hotel-reservation-theme/lang/*
 !/themes/hotel-reservation-theme/lang/index.php
 !/themes/hotel-reservation-theme/lang/en.php
 
