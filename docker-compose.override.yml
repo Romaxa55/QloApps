@@ -6,6 +6,8 @@ services:
       - ./themes/hotel-reservation-theme/lang:/home/qloapps/themes/hotel-reservation-theme/lang:rw
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
+    tmpfs:
+      - /tmp/qloapps
     ports: []
 
   mariadb:
