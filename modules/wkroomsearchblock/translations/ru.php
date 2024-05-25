@@ -340,7 +340,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>categorypagesearch_9ba604d9592d950d6002
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_02fa171653f28a578b9067b1fc20b5d0'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_38571a5bad5b5b95698dd2df465ec8fd'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_da097cb599541edbea879d14f31e715c'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_6166c0832319050b9f2922a819ed1b49'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_6166c0832319050b9f2922a819ed1b49'] = 'Пожалуйста, выберите действительный диапазон дат';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_a457237043b2833f9f968c47ff282ac0'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_b2909eef7c968c6e1fa20bf4735da4b5'] = 'Недействительные взрослые';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81f8d725d84b2e'] = '';
