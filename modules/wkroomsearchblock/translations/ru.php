@@ -4,7 +4,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_98bcc99fd5f9ba5c4df41
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_81b7ba315790a4e172088e0284c4e9c5'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_c57fbb68344c9aa8f3cece05ad876ae6'] = 'Пожалуйста, выберите название отеля	';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_77ee10023dc0558e89752b846c9e4843'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_e532f3b0f11e7f91c6b9048a59031850'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_e532f3b0f11e7f91c6b9048a59031850'] = 'Пожалуйста, введите время выезда';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_0dabf5a1efaaca613149f44bb7f07813'] = 'Дата заезда не может быть раньше текущей даты.';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_4d132c9783393c14bba497e11c8ab9c0'] = 'Дата выезда должна быть позже даты заезда.';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_7a4b3f0e76bc75caf203b4c640a17e0f'] = 'Выбрать отель';
@@ -309,7 +309,7 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_a457237043b2833f9f96
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_b2909eef7c968c6e1fa20bf4735da4b5'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81f8d725d84b2e'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_fcdc86aac9171bfe3abc68f10d819cb9'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>searchform_e774baa0a54cfa637819f9fe66d6e79f'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>searchform_e774baa0a54cfa637819f9fe66d6e79f'] = 'Расположение отеля';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_7a4b3f0e76bc75caf203b4c640a17e0f'] = 'Выбрать отель';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_ec86d6e09689fe97bb7d1a233d5e5e13'] = 'Регистрироваться';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_edfd56b38f555c58ca8f6902c39dbd04'] = 'Проверить';
@@ -330,13 +330,13 @@ $_MODULE['<{wkroomsearchblock}prestashop>searchform_c4e13ba7a66c1c004d8bbe9fef3a
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_96cf4454dc3ef5d9fdb449d7abd5fa8f'] = 'Добавить комнату';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_9ba604d9592d950d600241e21916db07'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e471afb380b4cd24a7fd612d563007b2'] = 'Результаты поиска для';
-$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e807d3ccf8d24c8c1a3d86db5da78da8'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e807d3ccf8d24c8c1a3d86db5da78da8'] = 'Дни';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_e10758a0bbe2e5a1bd948a8fe1a4a3dc'] = 'Ночи';
 $_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_0edc9b073397681dc9f2c479686ea0d9'] = 'Ночь';
-$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_c19c9ab290c7903e496c636cba2952c3'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>roomtypepagesearch_c19c9ab290c7903e496c636cba2952c3'] = 'Изменить поиск';
 $_MODULE['<{wkroomsearchblock}prestashop>landingpagexsbtn_b3ed1d9151cc469d5521e529ed7596bf'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>landingpagesearch_9ba604d9592d950d600241e21916db07'] = '';
-$_MODULE['<{wkroomsearchblock}prestashop>categorypagesearch_9ba604d9592d950d600241e21916db07'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>categorypagesearch_9ba604d9592d950d600241e21916db07'] = 'Поиск номеров';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_02fa171653f28a578b9067b1fc20b5d0'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_38571a5bad5b5b95698dd2df465ec8fd'] = 'Пожалуйста, выберите действительную регистрацию заезда';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_da097cb599541edbea879d14f31e715c'] = '';
@@ -344,4 +344,4 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_6166c0832319050b9f29
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_a457237043b2833f9f968c47ff282ac0'] = 'Неверное размещение';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_b2909eef7c968c6e1fa20bf4735da4b5'] = 'Недействительные взрослые';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81f8d725d84b2e'] = 'Недействительные дети';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_fcdc86aac9171bfe3abc68f10d819cb9'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_fcdc86aac9171bfe3abc68f10d819cb9'] = 'Неверный возраст детей';
