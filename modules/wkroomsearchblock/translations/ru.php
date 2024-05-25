@@ -1,9 +1,9 @@
 <?php
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_559f29237ee1a63cea45d8693da82361'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_559f29237ee1a63cea45d8693da82361'] = 'Панели поиска комнат QloApps';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_98bcc99fd5f9ba5c4df41bab50ff6c98'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_81b7ba315790a4e172088e0284c4e9c5'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_c57fbb68344c9aa8f3cece05ad876ae6'] = 'Пожалуйста, выберите название отеля	';
-$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_77ee10023dc0558e89752b846c9e4843'] = '';
+$_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_77ee10023dc0558e89752b846c9e4843'] = 'Пожалуйста, введите время заезда';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_e532f3b0f11e7f91c6b9048a59031850'] = 'Пожалуйста, введите время выезда';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_0dabf5a1efaaca613149f44bb7f07813'] = 'Дата заезда не может быть раньше текущей даты.';
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchblock_4d132c9783393c14bba497e11c8ab9c0'] = 'Дата выезда должна быть позже даты заезда.';
