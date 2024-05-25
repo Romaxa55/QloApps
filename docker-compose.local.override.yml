@@ -11,6 +11,7 @@ services:
       - ./img:/home/qloapps/img
       - ./modules_dev:/home/qloapps/modules
       - ./img_dev:/home/qloapps/img
+      - ./themes:/home/themes
     ports:
       - "9003:9003"
     environment:
