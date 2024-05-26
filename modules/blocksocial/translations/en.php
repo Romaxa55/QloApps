@@ -33,6 +33,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -64,6 +65,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -95,6 +97,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -126,6 +129,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -157,6 +161,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -188,6 +193,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -219,6 +225,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -250,6 +257,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -281,6 +289,7 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
 $_MODULE['<{blocksocial}prestashop>blocksocial_3c3fcc2aa9705117ce4b589ed5a72853'] = 'Social networking block';
 $_MODULE['<{blocksocial}prestashop>blocksocial_094d3ac865853e0be9ba42e80f0f7ee7'] = 'Allows you to add information about your brand\'s social networking accounts.';
 $_MODULE['<{blocksocial}prestashop>blocksocial_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
@@ -312,3 +321,4 @@ $_MODULE['<{blocksocial}prestashop>blocksocial_15db599e0119be476d71bfc1fda72217'
 $_MODULE['<{blocksocial}prestashop>blocksocial_55f015a0c5605702f913536afe70cfb0'] = 'Instagram';
 $_MODULE['<{blocksocial}prestashop>blocksocial_970cfba66b8380fb97b742e4571356c6'] = 'Youtube';
 $_MODULE['<{blocksocial}prestashop>blocksocial_dda8dc38128a8c843ba9f496d6ee7186'] = 'Google Plus';
+$_MODULE['<{blocksocial}prestashop>blocksocial_738bc5faa88e6b0fa0e7e3385d7e4ee3'] = 'Follow us on';
