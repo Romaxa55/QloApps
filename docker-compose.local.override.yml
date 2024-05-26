@@ -9,7 +9,8 @@ services:
       - ./config_dev:/home/qloapps/config
       - ./admin:/home/qloapps/adm
       - ./img:/home/qloapps/img
-      - ./modules_dev:/home/qloapps/modules:rw
+      - ./modules/blockuserinfo/translations:/home/qloapps/modules/blockuserinfo/translations:rw
+      - ./modules:/home/qloapps/modules
       - ./img_dev:/home/qloapps/img
     ports:
       - "9003:9003"
