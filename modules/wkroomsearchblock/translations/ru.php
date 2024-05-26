@@ -311,8 +311,8 @@ $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_174ed14d11939699fb81
 $_MODULE['<{wkroomsearchblock}prestashop>wkroomsearchhelper_fcdc86aac9171bfe3abc68f10d819cb9'] = '';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_e774baa0a54cfa637819f9fe66d6e79f'] = 'Расположение отеля';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_7a4b3f0e76bc75caf203b4c640a17e0f'] = 'Выбрать отель';
-$_MODULE['<{wkroomsearchblock}prestashop>searchform_ec86d6e09689fe97bb7d1a233d5e5e13'] = 'Регистрироваться';
-$_MODULE['<{wkroomsearchblock}prestashop>searchform_edfd56b38f555c58ca8f6902c39dbd04'] = 'Проверить';
+$_MODULE['<{wkroomsearchblock}prestashop>searchform_ec86d6e09689fe97bb7d1a233d5e5e13'] = 'Заезд';
+$_MODULE['<{wkroomsearchblock}prestashop>searchform_edfd56b38f555c58ca8f6902c39dbd04'] = 'Выезд';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_546fdfcd4e36d954c61f67dac293c639'] = 'Прибытие Отъезд';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_fa4db5c7540aa96b2267921fe268a330'] = 'Взрослые';
 $_MODULE['<{wkroomsearchblock}prestashop>searchform_5a600f5b88f416c470991c6831add13a'] = 'Взрослый';
