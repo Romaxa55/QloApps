@@ -3,8 +3,6 @@ services:
     volumes:
 #      - qloapps_data:/home/qloapps
       - /opt/themes:/home/qloapps/themes:rw
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
       - /opt/img:/home/qloapps/img:rw
       - /opt/config:/home/qloapps/config:rw
       - /opt/backups:/home/qloapps/adm/backups:rw
