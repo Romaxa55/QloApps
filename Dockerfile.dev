@@ -24,7 +24,7 @@ WORKDIR /home/${user}
 RUN apk update \
     && apk add --no-cache nginx \
     && apk add --no-cache php$php_version php$php_version-bcmath php$php_version-cli php$php_version-json php$php_version-curl php$php_version-fpm php$php_version-gd php$php_version-ldap php$php_version-mbstring php$php_version-pdo_mysql php$php_version-soap php$php_version-sqlite3 php$php_version-xml php$php_version-zip php$php_version-intl php$php_version-pecl-imagick php$php_version-session php$php_version-dom curl git nano vim wget php$php_version-phar php$php_version-simplexml php$php_version-ctype supervisor grep \
-    && apk add --no-cache php7-pecl-xdebug php7-dev autoconf g++ make
+    && apk add --no-cache php$php_version-pecl-xdebug php$php_version-dev autoconf g++ make php$php_version-xdebug
 
 # Setup non-root user with specified home directory
 RUN adduser -D -s /bin/sh -h /home/${user} ${user}
@@ -65,6 +65,14 @@ RUN sed -i \
     -e 's|^\s*;\?\s*listen.mode\s*=.*|listen.mode = 0660|' \
     -e 's|^\s*;\?\s*catch_workers_output\s*=.*|catch_workers_output = yes|' \
     /etc/php$php_version/php-fpm.d/www.conf
+
+# Xdebug configuration
+RUN echo "zend_extension=xdebug.so" >> /etc/php$php_version/conf.d/xdebug.ini \
+    && echo "xdebug.mode=debug" >> /etc/php$php_version/conf.d/xdebug.ini \
+    && echo "xdebug.start_with_request=yes" >> /etc/php$php_version/conf.d/xdebug.ini \
+    && echo "xdebug.client_host=host.docker.internal" >> /etc/php$php_version/conf.d/xdebug.ini \
+    && echo "xdebug.client_port=9003" >> /etc/php$php_version/conf.d/xdebug.ini \
+    && echo "xdebug.log=/tmp/xdebug.log" >> /etc/php$php_version/conf.d/xdebug.ini
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
