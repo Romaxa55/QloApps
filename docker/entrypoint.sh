@@ -26,8 +26,13 @@ chmod -R 777 /tmp/qloapps
 if [ "$ENVIRONMENT" = "development" ]; then
     echo "Running composer install..."
     composer install --prefer-dist --optimize-autoloader --no-interaction
-    rm -r install
-    rm -r admin
+fi
+
+# Remove install and admin directories if REMOVE_INSTALL_ADMIN is set to TRUE
+if [ "$REMOVE_INSTALL_ADMIN" = "yes" ]; then
+    echo "Removing install and admin directories..."
+    rm -r /home/qloapps/install
+    rm -r /home/qloapps/admin
 fi
 
 # Run Supervisor

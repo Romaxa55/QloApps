@@ -96,5 +96,6 @@ services:
       XDEBUG_MODE: debug
       XDEBUG_START_WITH_REQUEST: yes
       ENVIRONMENT: development
+      REMOVE_INSTALL_ADMIN: yes
     extra_hosts:
       - "host.docker.internal:host-gateway"
