@@ -3,6 +3,7 @@ services:
     volumes:
 #      - qloapps_data:/home/qloapps
       - /opt/themes:/home/qloapps/themes:rw
+      - /opt/adm:/home/qloapps/adm:rw
       - /opt/img:/home/qloapps/img:rw
       - /opt/config:/home/qloapps/config:rw
       - /opt/backups:/home/qloapps/adm/backups:rw
