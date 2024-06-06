@@ -25,7 +25,7 @@ services:
       - "traefik.http.routers.php.middlewares=corsheader@docker"
       - "traefik.http.middlewares.corsheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
       - "traefik.http.middlewares.corsheader.headers.accesscontrolallowheaders=*"
-      - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://danang.rent"
+      - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://${DOMAIN}"
       - "traefik.http.middlewares.corsheader.headers.accesscontrolmaxage=100"
       - "traefik.http.middlewares.corsheader.headers.addvaryheader=true"
 

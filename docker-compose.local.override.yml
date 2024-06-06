@@ -8,7 +8,6 @@ services:
     volumes:
       - ./config_dev:/home/qloapps/config
       - ./admin:/home/qloapps/adm
-      - ./img:/home/qloapps/img
       - ./img_dev:/home/qloapps/img
       - ./modules/bankwire/translations:/home/qloapps/modules/bankwire/translations:rw
       - ./modules/blockcart/translations:/home/qloapps/modules/blockcart/translations:rw

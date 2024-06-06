@@ -37,7 +37,7 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - letsencrypt:/letsencrypt
+      - /etc/traefik:/letsencrypt
     networks:
       - qloapps-network
     labels:
@@ -56,20 +56,5 @@ services:
       - "traefik.http.routers.acme-challenge.entrypoints=web"
       - "traefik.http.routers.acme-challenge.priority=2"
 
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: always
-    environment:
-      ADMINER_DEFAULT_SERVER: mariadb
-    networks:
-      - qloapps-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.adminer.rule=Host(`shell.${DOMAIN}`)"
-      - "traefik.http.services.adminer.loadbalancer.server.port=8080"
-      - "traefik.http.routers.adminer.entrypoints=web"
 
-volumes:
-  letsencrypt:
-    driver: local
+
