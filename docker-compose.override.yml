@@ -32,6 +32,7 @@ services:
       - "--certificatesresolvers.mytlschallenge.acme.httpchallenge.entrypoint=web"
       - "--certificatesresolvers.mytlschallenge.acme.email=${ACME_EMAIL}"
       - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
+      - "--log.level=DEBUG"
     ports:
       - "80:80"
       - "443:443"
@@ -41,19 +42,19 @@ services:
     networks:
       - qloapps-network
     labels:
-      # Глобальный редирект на HTTPS
-      - "traefik.http.middlewares.test-redirectscheme.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.test-redirectscheme.redirectscheme.permanent=true"
+      # Middleware для редиректа HTTP на HTTPS
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+
+      # Middleware для обработки ошибок
+      - "traefik.http.middlewares.error-handler.errors.status=404"
+      - "traefik.http.middlewares.error-handler.errors.service=error-service"
+      - "traefik.http.middlewares.error-handler.errors.query=/404.html"
 
       # Глобальный редирект всех HTTP запросов на HTTPS
       - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
       - "traefik.http.routers.http-catchall.entrypoints=web"
       - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
-
-      # Middleware для обработки ошибок
-      - "traefik.http.middlewares.error-handler.errors.status=404"
-      - "traefik.http.middlewares.error-handler.errors.service=error@internal"
-      - "traefik.http.middlewares.error-handler.errors.query=/empty"
 
       # Маршрутизатор для ACME-челленджей
       - "traefik.http.routers.acme-challenge.rule=PathPrefix(`/.well-known/acme-challenge/`)"
@@ -61,8 +62,12 @@ services:
       - "traefik.http.routers.acme-challenge.priority=2"
 
       # Обработка ошибок 404
-      - "traefik.http.routers.catchall.errors.middlewares=error-handler"
-      - "traefik.http.routers.catchall.errors.rule=PathPrefix(`/`)"
-      - "traefik.http.routers.catchall.entrypoints=web"
+      - "traefik.http.routers.catchall.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.catchall.middlewares=error-handler"
+      - "traefik.http.routers.catchall.entrypoints=websecure"
 
-
+  error-service:
+    image: traefik/whoami  # Простая служба, которая возвращает 404
+    labels:
+      - "traefik.http.routers.error-service.rule=Host(`error.local`)"
+      - "traefik.http.services.error-service.loadbalancer.server.port=80"
