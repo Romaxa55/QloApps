@@ -60,5 +60,9 @@ services:
       - "traefik.http.routers.acme-challenge.entrypoints=web"
       - "traefik.http.routers.acme-challenge.priority=2"
 
+      # Обработка ошибок 404
+      - "traefik.http.routers.catchall.errors.middlewares=error-handler"
+      - "traefik.http.routers.catchall.errors.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.catchall.entrypoints=web"
 
 
