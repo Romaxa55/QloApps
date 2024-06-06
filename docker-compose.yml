@@ -47,6 +47,8 @@ services:
 networks:
   qloapps-network:
     driver: bridge
+  public:
+    external: true
 
 volumes:
   mariadb_data:
