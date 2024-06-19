@@ -10,7 +10,7 @@ services:
       - /opt/download:/home/qloapps/download:rw
       - /opt/pdf:/home/qloapps/pdf:rw
     environment:
-      REMOVE_INSTALL_ADMIN: yes
+      REMOVE_INSTALL_ADMIN: "yes"
     tmpfs:
       - /tmp/qloapps
     ports: []
