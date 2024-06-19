@@ -9,8 +9,8 @@ services:
       - /etc/timezone:/etc/timezone:ro
     ports:
       - "127.0.0.1:8080:80"
-    depends_on:
-      - mariadb
+#    depends_on:
+#      - mariadb
     networks:
       - qloapps-network
     labels:
