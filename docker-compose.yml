@@ -12,7 +12,7 @@ services:
     depends_on:
       - mariadb
     networks:
-      - qloapps-network
+      - public
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.php-web.rule=Host(`${DOMAIN}`)"
@@ -42,11 +42,9 @@ services:
       - ./docker/my_custom.cnf:/etc/mysql/conf.d/my_custom.cnf
       - ./logs:/var/log/mysql
     networks:
-      - qloapps-network
+      - public
 
 networks:
-  qloapps-network:
-    driver: bridge
   public:
     external: true
 
