@@ -15,11 +15,11 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
+        - "traefik.http.routers.php.tls=true"
         - "traefik.http.routers.php.rule=Host(`${DOMAIN}`)"
         - "traefik.http.routers.php.entrypoints=websecure"
-        - "traefik.http.routers.php.tls.certresolver"
-        - "traefik.http.routers.php.tls=true"
-        - "traefik.http.routers.php.middlewares=corsheader@docker"
+        - "traefik.http.routers.php.tls.certresolver=myresolver"
+        - "traefik.http.routers.php.middlewares=corsheader@swarm"
         - "traefik.http.middlewares.corsheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
         - "traefik.http.middlewares.corsheader.headers.accesscontrolallowheaders=*"
         - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://${DOMAIN}"
