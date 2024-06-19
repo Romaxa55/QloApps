@@ -1,6 +1,6 @@
 services:
   php:
-    image: app
+    image: app:latest
     build:
       context: .
       dockerfile: Dockerfile
