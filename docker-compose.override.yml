@@ -1,11 +1,10 @@
 services:
   php:
     volumes:
-#      - qloapps_data:/home/qloapps
       - /opt/themes:/home/qloapps/themes:rw
       - /opt/adm:/home/qloapps/adm:rw
       - /opt/img:/home/qloapps/img:rw
-      - /opt/config:/home/qloapps/config:rw
+      - /mnt/blockstorage/config:/home/qloapps/config:rw
       - /opt/backups:/home/qloapps/adm/backups:rw
       - /opt/modules:/home/qloapps/modules:rw
       - /opt/download:/home/qloapps/download:rw
