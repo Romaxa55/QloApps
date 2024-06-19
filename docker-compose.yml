@@ -12,6 +12,7 @@ services:
     networks:
       - public
     deploy:
+      replicas: 2
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.php.tls=true"
