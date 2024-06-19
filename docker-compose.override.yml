@@ -1,14 +1,14 @@
 services:
   php:
     volumes:
-      - /opt/themes:/home/qloapps/themes:rw
-      - /opt/adm:/home/qloapps/adm:rw
-      - /opt/img:/home/qloapps/img:rw
-      - /mnt/blockstorage/config:/home/qloapps/config:rw
-      - /opt/backups:/home/qloapps/adm/backups:rw
-      - /opt/modules:/home/qloapps/modules:rw
-      - /opt/download:/home/qloapps/download:rw
-      - /opt/pdf:/home/qloapps/pdf:rw
+      - /mnt/blockstorage/app/themes:/home/qloapps/themes:rw
+      - /mnt/blockstorage/app/adm:/home/qloapps/adm:rw
+      - /mnt/blockstorage/app/img:/home/qloapps/img:rw
+      - /mnt/blockstorage/app/config:/home/qloapps/config:rw
+      - /mnt/blockstorage/app/backups:/home/qloapps/adm/backups:rw
+      - /mnt/blockstorage/app/modules:/home/qloapps/modules:rw
+      - /mnt/blockstorage/app/download:/home/qloapps/download:rw
+      - /mnt/blockstorage/app/pdf:/home/qloapps/pdf:rw
     environment:
       REMOVE_INSTALL_ADMIN: "yes"
     tmpfs:
