@@ -19,30 +19,4 @@ services:
     volumes:
       - /opt/database:/var/lib/mysql
 
-  traefik:
-    image: traefik:v3.0.2
-    container_name: traefik
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--entryPoints.web.address=:80"
-      - "--entryPoints.web.http.redirections.entryPoint.to=websecure"
-      - "--entryPoints.web.http.redirections.entryPoint.scheme=https"
-      - "--entryPoints.websecure.address=:443"
-      - "--providers.docker.network=public"
-      - "--providers.docker.httpClientTimeout=300"
-      - "--providers.docker.watch=false"
-      - "--certificatesresolvers.mytlschallenge.acme.httpchallenge=true"
-      - "--certificatesresolvers.mytlschallenge.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.mytlschallenge.acme.email=${ACME_EMAIL}"
-      - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
-
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /etc/traefik:/letsencrypt
-    networks:
-      - public
 
