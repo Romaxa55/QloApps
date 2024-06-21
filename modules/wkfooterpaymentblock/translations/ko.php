@@ -1,5 +1,5 @@
 <?php
-$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_4edde6b27593b1d1bab822783b2faf49'] = '푸터 결제 수락 블록';
+$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_4edde6b27593b1d1bab822783b2faf49'] = '바닥글 결제 승인 차단';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_7cce885d4ad33290e7d76009933138cb'] = '푸터에 결제 게이트웨이 아이콘 표시';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_89fc0d6fe12b0e0c1af5c7a0373435a6'] = '비자';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_b993f20c6e3b73949a96e934a76bbfef'] = '아메리칸 익스프레스';
