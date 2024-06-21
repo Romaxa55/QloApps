@@ -83,5 +83,4 @@ $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontro
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_5b09946566a434c57252faaeb7813e90'] = 'Изображение платежа';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_c9cc8cce247e49bae79f15173ce97354'] = 'Сохранять';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_057246218ca1f7dfec50d533f849021e'] = 'Пожалуйста, выберите изображение для блокировки платежа.';
-$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = '';
-$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = 'Платеж принят';
+$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = 'принимаем платежи';

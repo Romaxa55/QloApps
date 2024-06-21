@@ -84,4 +84,3 @@ $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontro
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_057246218ca1f7dfec50d533f849021e'] = 'Please select an image for payment block.';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = 'payment accepted';
-$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = 'payment accepted';
