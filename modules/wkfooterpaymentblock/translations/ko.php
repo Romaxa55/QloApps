@@ -65,7 +65,7 @@ $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_4fc25e7909fd26fd72f1b57f8ac7b5e0'] = '결제 이미지';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_49ee3087348e8d44e1feda1917443987'] = '이름';
-$_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_4d3d769b812b6faa6b76e1a8abaece2d'] = '활성화';
+$_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_4d3d769b812b6faa6b76e1a8abaece2d'] = '활동적인';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_52f5e0bc3859bc5f5e25130b6c7e8881'] = '위치';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_3c7679577cd1d0be2b98faf898cfc56d'] = '추가 날짜';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_d3b206d196cd6be3a2764c1fb90b200f'] = '선택 항목 삭제';
