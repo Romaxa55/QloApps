@@ -81,4 +81,4 @@ $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontro
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_c9cc8cce247e49bae79f15173ce97354'] = '저장';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_057246218ca1f7dfec50d533f849021e'] = '결제 블록에 대한 이미지를 선택해 주세요.';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = '';
-$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = '결제 수락됨';
+$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_f92df279a676408e0b0592dbca4bb12a'] = '결제 승인됨';
