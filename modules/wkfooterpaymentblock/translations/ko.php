@@ -3,7 +3,7 @@ $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_4edde6b27593b1d
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_7cce885d4ad33290e7d76009933138cb'] = '푸터에 결제 게이트웨이 아이콘 표시';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_89fc0d6fe12b0e0c1af5c7a0373435a6'] = '비자';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_b993f20c6e3b73949a96e934a76bbfef'] = '아메리칸 익스프레스';
-$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_2fe3351421d198ea6d3c4a4a0358d08f'] = '마스터카드';
+$_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_2fe3351421d198ea6d3c4a4a0358d08f'] = '마스터 카드';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_9b88c95a15e018c3f8038a7d0160145c'] = '페이팔';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_b718adec73e04ce3ec720dd11a06a308'] = '';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_4fc25e7909fd26fd72f1b57f8ac7b5e0'] = '';
