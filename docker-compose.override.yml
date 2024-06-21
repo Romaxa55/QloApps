@@ -12,6 +12,8 @@ services:
       - /mnt/blockstorage/app/upload:/home/qloapps/upload:rw
       - /mnt/blockstorage/app/logs:/tmp/logs:rw
       - /mnt/blockstorage/app/override:/home/qloapps/override:rw
+      - /mnt/blockstorage/QloApps/robots.txt:/home/qloapps/robots.txt:rw
+      - /mnt/blockstorage/QloApps/.htaccess:/home/qloapps/.htaccess:rw
     environment:
       REMOVE_INSTALL_ADMIN: "yes"
     tmpfs:
