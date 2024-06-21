@@ -1,4 +1,7 @@
 <?php
+
+global $_MODULE;
+$_MODULE = array();
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_4edde6b27593b1d1bab822783b2faf49'] = '바닥글 결제 승인 차단';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_7cce885d4ad33290e7d76009933138cb'] = '바닥글에 결제 게이트웨이 아이콘을 표시합니다.';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_89fc0d6fe12b0e0c1af5c7a0373435a6'] = '비자';

@@ -1,4 +1,7 @@
 <?php
+
+global $_MODULE;
+$_MODULE = array();
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_4edde6b27593b1d1bab822783b2faf49'] = 'Block „Zahlung akzeptiert“ in der Fußzeile';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_7cce885d4ad33290e7d76009933138cb'] = 'Zahlungsgateway-Symbole in der Fußzeile anzeigen.';
 $_MODULE['<{wkfooterpaymentblock}prestashop>wkfooterpaymentblock_89fc0d6fe12b0e0c1af5c7a0373435a6'] = 'Visa';
