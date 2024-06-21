@@ -339,96 +339,122 @@ abstract class ModuleCore
      * Insert module into datable
      */
     public function install()
-    {
-        Hook::exec('actionModuleInstallBefore', array('object' => $this));
-        // Check module name validation
-        if (!Validate::isModuleName($this->name)) {
-            $this->_errors[] = Tools::displayError('Unable to install the module (Module name is not valid).');
-            return false;
-        }
+  {
+      PrestaShopLogger::addLog('Module install: Starting installation for ' . $this->name);
 
-        // Check PS version compliancy
-        if (!$this->checkCompliancy()) {
-            $this->_errors[] = Tools::displayError('The version of your module is not compliant with your QloApps version.');
-            return false;
-        }
+      Hook::exec('actionModuleInstallBefore', array('object' => $this));
 
-        // Check module dependencies
-        if (count($this->dependencies) > 0) {
-            foreach ($this->dependencies as $dependency) {
-                if (!Db::getInstance()->getRow('SELECT `id_module` FROM `'._DB_PREFIX_.'module` WHERE LOWER(`name`) = \''.pSQL(Tools::strtolower($dependency)).'\'')) {
-                    $error = Tools::displayError('Before installing this module, you have to install this/these module(s) first:').'<br />';
-                    foreach ($this->dependencies as $d) {
-                        $error .= '- '.$d.'<br />';
-                    }
-                    $this->_errors[] = $error;
-                    return false;
-                }
-            }
-        }
+      // Check module name validation
+      if (!Validate::isModuleName($this->name)) {
+          PrestaShopLogger::addLog('Module install: Invalid module name');
+          $this->_errors[] = Tools::displayError('Unable to install the module (Module name is not valid).');
+          return false;
+      }
+      PrestaShopLogger::addLog('Module install: Module name is valid');
 
-        // Check if module is installed
-        $result = Module::isInstalled($this->name);
-        if ($result) {
-            $this->_errors[] = Tools::displayError('This module has already been installed.');
-            return false;
-        }
+      // Check PS version compliancy
+      if (!$this->checkCompliancy()) {
+          PrestaShopLogger::addLog('Module install: Version not compliant');
+          $this->_errors[] = Tools::displayError('The version of your module is not compliant with your QloApps version.');
+          return false;
+      }
+      PrestaShopLogger::addLog('Module install: Version compliant');
 
-        // Install overrides
-        try {
-            $this->installOverrides();
-        } catch (Exception $e) {
-            $this->_errors[] = sprintf(Tools::displayError('Unable to install override: %s'), $e->getMessage());
-            $this->uninstallOverrides();
-            return false;
-        }
+      // Check module dependencies
+      if (count($this->dependencies) > 0) {
+          foreach ($this->dependencies as $dependency) {
+              if (!Db::getInstance()->getRow('SELECT `id_module` FROM `'._DB_PREFIX_.'module` WHERE LOWER(`name`) = \''.pSQL(Tools::strtolower($dependency)).'\'')) {
+                  $error = Tools::displayError('Before installing this module, you have to install this/these module(s) first:').'<br />';
+                  foreach ($this->dependencies as $d) {
+                      $error .= '- '.$d.'<br />';
+                  }
+                  PrestaShopLogger::addLog('Module install: Missing dependencies: ' . implode(', ', $this->dependencies));
+                  $this->_errors[] = $error;
+                  return false;
+              }
+          }
+      }
+      PrestaShopLogger::addLog('Module install: All dependencies are installed');
 
-        if (!$this->installControllers()) {
-            return false;
-        }
+      // Check if module is installed
+      $result = Module::isInstalled($this->name);
+      if ($result) {
+          PrestaShopLogger::addLog('Module install: Module already installed');
+          $this->_errors[] = Tools::displayError('This module has already been installed.');
+          return false;
+      }
+      PrestaShopLogger::addLog('Module install: Module is not already installed');
 
-        // Install module and retrieve the installation id
-        $result = Db::getInstance()->insert($this->table, array('name' => $this->name, 'active' => 1, 'version' => $this->version));
-        if (!$result) {
-            $this->_errors[] = Tools::displayError('Technical error: PrestaShop could not install this module.');
-            return false;
-        }
-        $this->id = Db::getInstance()->Insert_ID();
+      // Install overrides
+      try {
+          $this->installOverrides();
+          PrestaShopLogger::addLog('Module install: Overrides installed');
+      } catch (Exception $e) {
+          PrestaShopLogger::addLog('Module install: Failed to install overrides: ' . $e->getMessage());
+          $this->_errors[] = sprintf(Tools::displayError('Unable to install override: %s'), $e->getMessage());
+          $this->uninstallOverrides();
+          return false;
+      }
 
-        Cache::clean('Module::isInstalled'.$this->name);
+      if (!$this->installControllers()) {
+          PrestaShopLogger::addLog('Module install: Failed to install controllers');
+          return false;
+      }
+      PrestaShopLogger::addLog('Module install: Controllers installed');
 
-        // Enable the module for current shops in context
-        $this->enable();
+      // Install module and retrieve the installation id
+      $result = Db::getInstance()->insert($this->table, array('name' => $this->name, 'active' => 1, 'version' => $this->version));
+      if (!$result) {
+          PrestaShopLogger::addLog('Module install: Failed to insert module into database');
+          $this->_errors[] = Tools::displayError('Technical error: PrestaShop could not install this module.');
+          return false;
+      }
+      $this->id = Db::getInstance()->Insert_ID();
+      PrestaShopLogger::addLog('Module install: Module inserted into database with ID ' . $this->id);
 
-        // Permissions management
-        Db::getInstance()->execute('
-			INSERT INTO `'._DB_PREFIX_.'module_access` (`id_profile`, `id_module`, `view`, `configure`, `uninstall`) (
-				SELECT id_profile, '.(int)$this->id.', 1, 1, 1
-				FROM '._DB_PREFIX_.'access a
-				WHERE id_tab = (
-					SELECT `id_tab` FROM '._DB_PREFIX_.'tab
-					WHERE class_name = \'AdminModules\' LIMIT 1)
-				AND a.`view` = 1)');
+      Cache::clean('Module::isInstalled'.$this->name);
 
-        Db::getInstance()->execute('
-			INSERT INTO `'._DB_PREFIX_.'module_access` (`id_profile`, `id_module`, `view`, `configure`, `uninstall`) (
-				SELECT id_profile, '.(int)$this->id.', 1, 0, 0
-				FROM '._DB_PREFIX_.'access a
-				WHERE id_tab = (
-					SELECT `id_tab` FROM '._DB_PREFIX_.'tab
-					WHERE class_name = \'AdminModules\' LIMIT 1)
-				AND a.`view` = 0)');
+      // Enable the module for current shops in context
+      $this->enable();
+      PrestaShopLogger::addLog('Module install: Module enabled');
 
-        // Adding Restrictions for client groups
-        Group::addRestrictionsForModule($this->id, Shop::getShops(true, null, true));
-        Hook::exec('actionModuleInstallAfter', array('object' => $this));
+      // Permissions management
+      Db::getInstance()->execute('
+          INSERT INTO `'._DB_PREFIX_.'module_access` (`id_profile`, `id_module`, `view`, `configure`, `uninstall`) (
+              SELECT id_profile, '.(int)$this->id.', 1, 1, 1
+              FROM '._DB_PREFIX_.'access a
+              WHERE id_tab = (
+                  SELECT `id_tab` FROM '._DB_PREFIX_.'tab
+                  WHERE class_name = \'AdminModules\' LIMIT 1)
+              AND a.`view` = 1)');
+      PrestaShopLogger::addLog('Module install: Permissions for module set');
 
-        if (Module::$update_translations_after_install) {
-            $this->updateModuleTranslations();
-        }
+      Db::getInstance()->execute('
+          INSERT INTO `'._DB_PREFIX_.'module_access` (`id_profile`, `id_module`, `view`, `configure`, `uninstall`) (
+              SELECT id_profile, '.(int)$this->id.', 1, 0, 0
+              FROM '._DB_PREFIX_.'access a
+              WHERE id_tab = (
+                  SELECT `id_tab` FROM '._DB_PREFIX_.'tab
+                  WHERE class_name = \'AdminModules\' LIMIT 1)
+              AND a.`view` = 0)');
+      PrestaShopLogger::addLog('Module install: Additional permissions for module set');
 
-        return true;
-    }
+      // Adding Restrictions for client groups
+      Group::addRestrictionsForModule($this->id, Shop::getShops(true, null, true));
+      PrestaShopLogger::addLog('Module install: Restrictions for client groups added');
+
+      Hook::exec('actionModuleInstallAfter', array('object' => $this));
+      PrestaShopLogger::addLog('Module install: actionModuleInstallAfter hook executed');
+
+      if (Module::$update_translations_after_install) {
+          $this->updateModuleTranslations();
+          PrestaShopLogger::addLog('Module install: Module translations updated');
+      }
+
+      PrestaShopLogger::addLog('Module install: Module installed successfully');
+      return true;
+  }
+
 
     public function checkCompliancy()
     {
