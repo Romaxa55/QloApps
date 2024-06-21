@@ -75,7 +75,7 @@ $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontro
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_c8ea900ddc59c21803b929061fc99444'] = '새 결제 이미지 추가';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_1a33efc2d7c04929fbb27e1082386cf0'] = '푸터 결제 블록 구성';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_93cba07454f06a4a960172bbd6e2a435'] = '예';
-$_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_bafd7322c6e97d25b6299b5d6fe8920b'] = '아니오';
+$_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_bafd7322c6e97d25b6299b5d6fe8920b'] = '아니요';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_9a27b8e2cf570fed58ad3104320bf2c7'] = '결제 방법 이름';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_5b09946566a434c57252faaeb7813e90'] = '결제 이미지';
 $_MODULE['<{wkfooterpaymentblock}prestashop>adminfooterpaymentblocksettingcontroller_c9cc8cce247e49bae79f15173ce97354'] = '저장';
