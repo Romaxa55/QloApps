@@ -14,6 +14,10 @@ services:
       - /mnt/blockstorage/app/override:/home/qloapps/override:rw
       - /mnt/blockstorage/app/robots.txt:/home/qloapps/robots.txt:rw
       - /mnt/blockstorage/app/.htaccess:/home/qloapps/.htaccess:rw
+      - /mnt/blockstorage/app/qso_sitemap_cms_pages.xml:/home/qloapps/qso_sitemap_cms_pages.xml:rw
+      - /mnt/blockstorage/app/qso_sitemap_hotels.xml:/home/qloapps/qso_sitemap_hotels.xml:rw
+      - /mnt/blockstorage/app/qso_sitemap_room_types.xml:/home/qloapps/qso_sitemap_room_types.xml:rw
+      - /mnt/blockstorage/app/sitemap_index.xml:/home/qloapps/sitemap_index.xml:rw
     environment:
       REMOVE_INSTALL_ADMIN: "yes"
     tmpfs:
