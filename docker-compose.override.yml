@@ -9,6 +9,7 @@ services:
       - /mnt/blockstorage/app/modules:/home/qloapps/modules:rw
       - /mnt/blockstorage/app/download:/home/qloapps/download:rw
       - /mnt/blockstorage/app/pdf:/home/qloapps/pdf:rw
+      - /mnt/blockstorage/app/upload:/home/qloapps/upload:rw
     environment:
       REMOVE_INSTALL_ADMIN: "yes"
     tmpfs:
