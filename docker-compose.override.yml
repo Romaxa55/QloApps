@@ -11,6 +11,7 @@ services:
       - /mnt/blockstorage/app/pdf:/home/qloapps/pdf:rw
       - /mnt/blockstorage/app/upload:/home/qloapps/upload:rw
       - /mnt/blockstorage/app/logs:/tmp/logs:rw
+      - /mnt/blockstorage/app/override:/home/qloapps/override:rw
     environment:
       REMOVE_INSTALL_ADMIN: "yes"
     tmpfs:
