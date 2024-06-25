@@ -31,7 +31,7 @@ services:
         - "traefik.http.middlewares.corsheader.headers.accesscontrolalloworiginlist=https://${DOMAIN}"
         - "traefik.http.middlewares.corsheader.headers.accesscontrolmaxage=100"
         - "traefik.http.middlewares.corsheader.headers.addvaryheader=true"
-        - "traefik.http.middlewares.basicauth.basicauth.users=romaxa55:$$apr1$$KTJgJy6W$$F13oDlK21Pb25s5BbBlIi1"
+        - "traefik.http.middlewares.php-auth.basicauth.users=romaxa55:$$apr1$$KTJgJy6W$$F13oDlK21Pb25s5BbBlIi1"
         - "traefik.http.services.php.loadbalancer.server.port=80"
 
 
