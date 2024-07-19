@@ -15,7 +15,7 @@ services:
       - /mnt/blockstorage/app/robots.txt:/home/qloapps/robots.txt:rw
       - /mnt/blockstorage/app/.htaccess:/home/qloapps/.htaccess:rw
       - /mnt/blockstorage/app/sitemaps:/home/qloapps/sitemaps:rw
-      - //mnt/blockstorage/QloApps/docker/site.conf:/etc/nginx/conf.d/default.conf:ro
+      - /mnt/blockstorage/QloApps/docker/site.conf:/etc/nginx/conf.d/default.conf:ro
 
     environment:
       REMOVE_INSTALL_ADMIN: "yes"
